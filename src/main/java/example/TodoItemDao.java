@@ -8,8 +8,8 @@ public class TodoItemDao {
 
     private final Jdbi jdbi;
 
-    public TodoItemDao(String datasource) {
-        jdbi = Jdbi.create(datasource);
+    public TodoItemDao(String url, String username, String password) {
+        jdbi = Jdbi.create(url, username, password);
     }
 
     public void persist(TodoItem todoItem) {
